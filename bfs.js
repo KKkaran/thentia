@@ -1,19 +1,9 @@
-//function to return a tree from the given edges with root node 1
-const input2 = [
-    [4,5],[5,3],[1,5],[2,1]
-]
-const input3 = [
-    [4,5],[5,3],[1,5],[2,5]
-]
-const input = [
-    [1,2],[1,3],[2,4],[2,5],[3,6],[3,7],[5,8]
-]
-
+// //function to return a tree from the given edges with root node 1
 
 const list = [];
 //iterate through the array and get the immediate children of 1
-function getTree(root) {
-
+function getTree(root,input) {
+    //input = inp;
     const stack = [];
     for (let i in input) {
         if (input[i] !== null) {
@@ -25,18 +15,19 @@ function getTree(root) {
             }
         }
     }
-         findStack(stack);
+    findStack(stack,input);
     return [1, ...list];
 }
-const findStack = (stack2) => {
+const findStack = (stack2,input) => {
     //console.log(stack2)
     while (stack2.length > 0) {
         //stack initially contains 5 and 2
         const curr = stack2.pop() //gives me 5 on first run
         list.push(curr);
-        getTree(curr);
+        getTree(curr,input);
     }
 }
-
-
-console.log(getTree(1))
+//console.log(getTree(1,[[1,2],[1,3],[2,4],[2,5],[3,6],[3,7],[4,8],[4,10],[8,9]]).toString())
+module.exports = {
+    getTree
+}

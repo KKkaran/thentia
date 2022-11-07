@@ -1,0 +1,23 @@
+{
+  "name": "thentia",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bfs.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KKkaran/thentia.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KKkaran/thentia/issues"
+  },
+  "homepage": "https://github.com/KKkaran/thentia#readme",
+  "dependencies": {
+    "jest": "^29.2.2"
+  }
+}
